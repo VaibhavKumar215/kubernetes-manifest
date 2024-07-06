@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "frontent-deployment"
+  namespace: "2048-game"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "frontend"
+  template:
+    metadata:
+      labels:
+        app: "frontend"
+    spec:
+      containers:
+      - image: public.erc.aws/kishorj/docker-2048:latest
+        imagePullPolicy: Always
+        name: "frondend"
+        ports:
+        - containerPort: 80
