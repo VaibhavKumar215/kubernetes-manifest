@@ -14,7 +14,7 @@ spec:
         app: "frontend"
     spec:
       containers:
-      - image: public.erc.aws/kishorj/docker-2048:latest
+      - image: 548802605325.dkr.ecr.us-east-1.amazonaws.com/my-cicd
         imagePullPolicy: Always
         name: "frondend"
         ports:
